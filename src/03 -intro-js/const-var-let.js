@@ -13,5 +13,5 @@ console.log('-----------------------------------------------------------------')
 
 const name3 = 'Celina'; 
 if ( true ) {const name3 = 'Paola'}; //GLOBAL SCOPE - CONST NEVER CHANGES
-console.log(name3); //
+console.log(name3); // Celina
 console.log('-----------------------------------------------------------------');
