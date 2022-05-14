@@ -14,7 +14,7 @@ const createArchivo = (base = 5) => {
                 rej(`El valor introducido ${ base } no es un número`);
                 return;
             }
-        fs.writeFile(`tabla-${base}.txt`, data, (err) => {
+        fs.writeFile(`./files/tabla-${base}.txt`, data, (err) => {
             if (err) throw error;
             res(`tabla-${base}.txt`);
         });

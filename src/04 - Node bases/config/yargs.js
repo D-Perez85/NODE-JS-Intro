@@ -1,4 +1,4 @@
-const { describe } = require('yargs');
+const { describe, number } = require('yargs');
 
 const argv = require('yargs')
                     .option('b', {
@@ -12,6 +12,12 @@ const argv = require('yargs')
                         type: 'boolean',
                         default: false,
                         describe: 'Lista la tabla en Consola'
+                    })
+                    .option('h',{
+                        alias: 'limite',
+                        type: 'number',
+                        default: 10,
+                        describe: 'Es el limite que le indico'
                     })
                     .check((argv, options)=>{
                         if(isNaN(argv.b)){
