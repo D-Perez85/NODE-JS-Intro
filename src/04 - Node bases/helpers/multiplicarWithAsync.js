@@ -1,7 +1,5 @@
 const fs = require('fs');
-
 const createArchivo = async(base = 5) => {
-
     try {
         console.log('=============================');
         console.log('TABLA DE MULTIPLICAR -', base);
