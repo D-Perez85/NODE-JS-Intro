@@ -27,13 +27,17 @@ const salarios = [
 const getEmpleado = (id)=>{
     return new Promise((res, rej)=>{
         const people = empleados.find(e=> e.id === id); 
-        (people) ? res(people) : rej('No existe ese ID para empleados')
+        (people) 
+        ? res(people) 
+        : rej('No existe ese ID para empleados')
     })
 }
 const getSalario = (id)=>{
     return new Promise((res, rej)=>{
         const value = salarios.find(e=> e.id === id); 
-        (value) ? res(value) : rej('No existe ese ID para Salarios')
+        (value) 
+        ? res(value) 
+        : rej('No existe ese ID para Salarios')
     })
 }
 
