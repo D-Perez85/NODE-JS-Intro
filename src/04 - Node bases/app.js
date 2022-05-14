@@ -1,14 +1,23 @@
 // const {createArchivo} = require('./helpers/multiplicarWithPromise'); 
-const {createArchivo} = require('./helpers/multiplicarWithAsync')
+const {createArchivo} = require('./helpers/multiplicarWithAsync'); 
+const argv = require('yargs')
+                    .option('b', {
+                        alias: 'base',
+                        type: 'number',
+                        demandOption: true//required args
+                    })
+                    .check((argv, options)=>{
+                        if(isNaN(argv.b)){
+                            throw 'La Base debe ser numerica'
+                        }
+                        return true; 
+                    })
+                    .argv; 
 
-console.log('From the Bases');
 console.clear(); 
+console.log(argv);
 
-//Args are comming by Console (IS NOT USED)
-// const [ , , arg3 = 'base=5'] = process.argv; 
-// const [ ,base = 5] = arg3.split('='); 
-
-const base = 4; 
-createArchivo(base)
+// const base = 4; 
+createArchivo(argv.b)
     .then(archivo => console.log(archivo, '- File Writed'))
     .catch(e => console.log(e));
