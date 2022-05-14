@@ -1,4 +1,5 @@
-//BASIC CALLBACK
+//BASIC CALLBACK (Function into another function like args)
+
 const getUserByID = (id, callback) => {
     const user = {
         id,
@@ -13,3 +14,5 @@ getUserByID(1, (user) => {
     console.log(`Legajo nro: ${user.id}`);
     console.log(`Name: ${user.name.toUpperCase()}`);
 });
+
+
